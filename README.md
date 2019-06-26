@@ -2,7 +2,7 @@
 
 Uses: ATmega4808, ATWINC1510, ATECC608A, AWS IoT Core, ThingsBoard
 
-This repository contains the source code for the application described in **Repurpose AVR-IoT WG to Connect to AWS** Application Note from Microchip.
+This repository contains the source code for the application described in [Repurpose AVR-IoT WG to Connect to AWS](http://ww1.microchip.com/downloads/en/AppNotes/AN3089-Repurpose-AVR-IoT-WG-to-Connect-to-AWS-00003089A.pdf) document from Microchip.
 
 ## Instructions
 
