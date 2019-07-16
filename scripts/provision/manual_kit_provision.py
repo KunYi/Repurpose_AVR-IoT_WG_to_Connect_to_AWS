@@ -110,28 +110,28 @@ def main():
     pubkey += pub_nums.y.to_bytes(32, byteorder='big', signed=False)
 
     ############################################################################
-    print("Save Singer CA Pub Key")
+    print("Sending Singer CA Pub Key")
     msg = "caPubKey:" + pubkey.hex() + '\0'
     com.write(msg.encode())
     res = com.read_until(b'\x00')
     print('    Done.\n')
     sleep(1)
 
-    print("Save Signer Certificate Message")
+    print("Sending Signer Certificate")
     msg = "caCert:" + signer_ca_cert.public_bytes(encoding=serialization.Encoding.DER).hex() + '\0'
     com.write(msg.encode())
     res = com.read_until(b'\x00')
     print('    Done.\n')
     sleep(1)
 
-    print("Save Device Certificate")
+    print("Sending Device Certificate")
     msg = "deviceCert:" + device_cert.public_bytes(encoding=serialization.Encoding.DER).hex() + '\0'
     com.write(msg.encode())
     res = com.read_until(b'\x00')
     print('    Done.\n')
     sleep(1)
 
-    print("Send to WINC")
+    print("Provisioning the WINC")
     com.write("transferCertificates:\0".encode())
     res = com.read_until(b'\x00')
     print('    Done.\n')

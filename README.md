@@ -14,7 +14,7 @@ similar to the old ones. If there is any issue running ```aws_register_signer.py
 scripts), see this [fix](https://github.com/MicrochipTech/aws-iot-zero-touch-secure-provisioning-kit/issues/4). A similar fix can be applied to other scripts
  - This first step is the most difficult to replicate!
 
-2. Program the AVR-IoT WG with the provisioning firmware in the folder ```ecc-provision``` of the code repository.
+2. Program the AVR-IoT WG with the provisioning firmware in the folder ```winc-provision``` of the code repository.
 3. Copy the ```scripts/provision/manual_kit_provision.py``` script to the folder where the root CA and signer CA were created, in step 1.
 4. Using a terminal, install ```pyserial``` using pip: ```pip install pyserial``` or ```python -m pip instal pyserial```.
 5. While AVR-IoT is still connected to the PC execute ```manual_kit_provision.py``` in its new
